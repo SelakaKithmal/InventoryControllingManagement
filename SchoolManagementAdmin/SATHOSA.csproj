@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6FA3BE11-F1A4-46F1-9CA6-85312FD81CDC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SATHOSA_ICS</RootNamespace>
+    <AssemblyName>SchoolManagementAdmin</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CalendarClock">
+      <HintPath>..\..\CalendarClock\CalendarClock\bin\Debug\CalendarClock.dll</HintPath>
+    </Reference>
+    <Reference Include="DigitalClock">
+      <HintPath>..\..\DigitalClock\DigitalClock\bin\Debug\DigitalClock.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net20\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net20\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net20\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NumericTextBox">
+      <HintPath>..\..\NumericTextBox\NumericTextBox\bin\Debug\NumericTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2013.3.1016.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2013.3.1016.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2013.3.1016.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="TelerikCommon, Version=2013.3.1016.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterEntry.Designer.cs">
+      <DependentUpon>MasterEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products.Designer.cs">
+      <DependentUpon>Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTS.Designer.cs">
+      <DependentUpon>REPORTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Customer.Designer.cs">
+      <DependentUpon>Report_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Invoice.Designer.cs">
+      <DependentUpon>Sales Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SATHOSADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SATHOSADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SATHOSADataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SATHOSADataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template.Designer.cs">
+      <DependentUpon>Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterEntry.resx">
+      <DependentUpon>MasterEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products.resx">
+      <DependentUpon>Products.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS.resx">
+      <DependentUpon>REPORTS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Customer.resx">
+      <DependentUpon>Report_Customer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales Invoice.resx">
+      <DependentUpon>Sales Invoice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template.resx">
+      <DependentUpon>Template.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SATHOSADataSet.xsc">
+      <DependentUpon>SATHOSADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SATHOSADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SATHOSADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SATHOSADataSet.xss">
+      <DependentUpon>SATHOSADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SATHOSADataSet1.xsc">
+      <DependentUpon>SATHOSADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SATHOSADataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SATHOSADataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SATHOSADataSet1.xss">
+      <DependentUpon>SATHOSADataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.arrow.down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.cabinet.files.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.clipboard.variant.edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.page.add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.user.add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.axis.three.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usericon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.futurama.fry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.list.check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.office.excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.transit.bus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.book.hardcover.open.writing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.page.search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.disk.download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.people1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.magnify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.magnify1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
